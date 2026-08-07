@@ -1,4 +1,4 @@
-resource "aws_nat_gateway" "example" {
+resource "aws_nat_gateway" "nat" {
   allocation_id                  = aws_eip.my-eip.id
   subnet_id                      = aws_subnet.my_public.id
 
@@ -7,7 +7,7 @@ resource "aws_nat_gateway" "example" {
   }
 
   depends_on = [ aws_internet_gateway.my-igw ]
-  
+
 }
 
 
