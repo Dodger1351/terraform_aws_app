@@ -40,7 +40,7 @@ resource  "aws_route_table" "private-rt" {
 ##### ROUTE TABLE NAT ----> INTERNET ######
 
 resource "aws_route" "private_net" {
-    route_table_id = aws_route.private-rt.id
+    route_table_id = aws_route_table.private-rt.id
     destination_cidr_block = "0.0.0.0/0"
     gateway_id = aws_nat_gateway.nat.id
 }
