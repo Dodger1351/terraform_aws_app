@@ -3,7 +3,17 @@ variable "my_s3_bucket" {
   type        = string
 }
 
+variable "instance_type" {
+  default = "t3.micro"
+  
+}
 
+
+
+variable "aws_region" {
+  default= "eu-north-1"
+  
+}
 
 variable "vpc_cidr" {
   default = "10.0.0.0/16"
