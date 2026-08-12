@@ -8,7 +8,33 @@ variable "instance_type" {
   
 }
 
+variable "ami_id" {
+  default = "ami-05bfa4a7765f38076"
+  
+}
 
+variable "project_name" {
+  type        = string
+  description = "Project name used for AWS resource naming"
+  default     = "my-app"
+}
+
+
+variable "asg_min_size"{
+  type = number
+  default = 1
+}
+
+variable "asg_desired_capacity"{
+  type = number
+  default = 1
+}
+
+variable "asg_max_size"{
+  type = number
+  default = 1
+
+}
 
 variable "aws_region" {
   default= "eu-north-1"
