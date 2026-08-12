@@ -50,8 +50,7 @@ resource "aws_autoscaling_group" "app" {
   max_size         = var.asg_max_size.id
 
   vpc_zone_identifier = [
-    aws_subnet.private_subnet_1.id,
-    aws_subnet.private_subnet_2.id
+    aws_subnet.my_private.id
   ]
 
   target_group_arns = [
