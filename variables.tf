@@ -20,7 +20,7 @@ variable "project_name" {
 }
 
 
-variable "asg_min_size"{
+variable "asg_min_size"{  
   type = number
   default = 1
 }
